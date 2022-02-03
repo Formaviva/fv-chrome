@@ -41,7 +41,7 @@ RUN apt-get update && \
   fonts-indic \
   fontconfig \
   libappindicator3-1 \
-  pdftk \
+#  pdftk \
   unzip \
   locales \
   gconf-service \
@@ -72,10 +72,8 @@ RUN apt-get update && \
   libxfixes3 \
   libxi6 \
   libxrandr2 \
-  libxrender1
-
-
-RUN libxss1 \
+  libxrender1 \
+  libxss1 \
   libxtst6 \
   ca-certificates \
   libappindicator1 \
