@@ -7,8 +7,11 @@ ENV PORT=3000
 ENV application_directory=/usr/src/app
 ENV ENABLE_XVBF=true
 
+ENV IS_DOCKER=true
+
 # Build Args
 ARG USE_CHROME_STABLE
+# ENV USE_CHROME_STABLE=false
 
 # Configuration for Chrome
 ENV CONNECTION_TIMEOUT=60000

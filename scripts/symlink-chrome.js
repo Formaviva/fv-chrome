@@ -6,7 +6,8 @@ const execAsync = promisify(nodeExec);
 const puppeteer = require('puppeteer');
 const packageJson = require('puppeteer/package.json');
 const CHROME_BINARY_LOCATION = '/usr/bin/google-chrome';
-const IS_DOCKER = fs.existsSync('/.dockerenv');
+// const IS_DOCKER = fs.existsSync('/.dockerenv');
+const IS_DOCKER = process.env.IS_DOCKER === 'true';
 
 const exec = async (command) => {
   const { stdout, stderr } = await execAsync(command);
